@@ -378,6 +378,14 @@ article .icon {
   cursor: default;
 }
 
+.text-container {
+  line-height: 1.5; 
+}
+
+.descripcion p {
+  margin-bottom: 20px; 
+}
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -454,4 +462,9 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
 }
