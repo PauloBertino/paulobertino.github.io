@@ -1,0 +1,96 @@
+/* Estilos generales para el modo oscuro */
+body.dark-mode {
+  background-color: #0f1111; /* Color de fondo oscuro */
+  color: #ffffff; /* Color de texto claro */
+}
+
+/* Estilos para enlaces en el modo oscuro */
+body.dark-mode a {
+  color: #bb86fc; /* Color de enlaces en modo oscuro */
+}
+
+/* Estilos para botones en el modo oscuro */
+body.dark-mode .btn {
+  background-color: #6200ea; /* Color de fondo de botones en modo oscuro */
+  color: #ffffff; /* Color de texto de botones en modo oscuro */
+}
+
+/* .dark-mode .details-container {
+  background: #4c4840;
+} */
+
+.dark-mode .details-container {
+  background: #181a1b;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: #131516;
+}
+
+.dark-mode .menu-links {
+  background-color: #181a1b;
+}
+
+.dark-mode .menu-links a {
+  color: white;
+}
+
+.dark-mode p {
+  color: grey;
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: white;
+}
+
+.dark-mode .menu-links a {
+  color: #bb86fc;
+}
+
+.dark-mode h2{
+  color: #555555;
+}
+
+.dark-mode .details-container {
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163)
+}
+
+.dark-mode .menu-links {
+  background-color: #181a1b;
+}
+
+.dark-mode .menu-links a {
+  color: white;
+}
+
+.dark-mode p {
+  color: #67625c;
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: white;
+}
+
+/* Estilos para el botón deslizable */
+.dark-mode-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc; /* Color de fondo en modo claro */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff; /* Color del botón en modo claro */
+  transition: transform 0.3s;
+}
+
+/* Mueve el botón a la derecha en modo oscuro */
+body.dark-mode .toggle-button {
+  transform: translateX(30px);
+  background-color: #6200ea; /* Color del botón en modo oscuro */
+}
