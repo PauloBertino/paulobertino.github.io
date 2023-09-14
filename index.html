@@ -1,292 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Paulo Bertino</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="styleDark.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paulo Bertino | Portafolio</title>
+    <link rel="icon" href="./img/icono.png" /> <!-- colocar icono -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/mystyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="mediaqueries.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
+    <!-- pre-load de imagenes -->
+    <!-- has un pre-load de las imagenes mas pesadas -->
+    <link rel="preload" href="./img/Aneyeon Pets.jpg" as="image">
+    <link rel="preload" href="./img/SGE.png" as="image">
 </head>
 
-<body>
-  <nav id="desktop-nav">
-    <div class="logo">Paulo Bertino</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">Acerca de mi</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <div class="dark-mode-toggle">
-          <button class="toggle-button" id="dark-mode-button" onclick="toggleDarkMode()" title="Modo Oscuro">
-            <i id="dark-mode-icon" class="far fa-sun"></i>
-          </button>
+<body class="wellcome w--opacity">
+
+    <!-- barra de anvegación -->
+    <nav class="w-100 position-fixed">
+        <div class="contenedor__principal nav white-color d-flex justify-content-between px-4 py-3 m-auto">
+            <div class="nav__name">
+                <span class="fs-6 fw-bold text-white">Paulo <span class="text-warning">Bertino</span></span>
+            </div>
+
+            <div class="nav_icon">
+                <i class="nav_enlace_icon fs-4 d-lg-none fa-solid fa-bars text-white"></i>
+            </div>
+
+            <div class="nav__enlaces d-flex flex-column flex-lg-row text-light">
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#inicio">Inicio</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#acercade">Acerca de mi</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#habilidades">Habilidades</a>
+                <a class="nav__enlace text-light text-decoration-none me-md-5" href="#experiencia">Experiencia</a>
+                <a class="nav__enlace text-light text-decoration-none" href="#contacto">Contacto</a>
+            </div>
         </div>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Paulo Alejandro Bertino</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">Acerca de mi</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experiencia</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
-        <li>
-          <div class="dark-mode-toggle">
-            <button class="toggle-button" id="hamburger-dark-mode-button" onclick="toggleDarkMode()"
-              title="Modo Oscuro">
-              <i id="hamburger-dark-mode-icon" class="far fa-sun"></i>
-            </button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/Perfil.png" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hola, soy</p>
-      <h1 class="title">Paulo Alejandro Bertino</h1>
-      <p class="section__text__p2">Backend Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/Curriculum_Paulo_Bertino.pdf')">
-          Descargar CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Datos de contacto
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/paulo-bertino-424818272/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/PauloBertino'" />
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Conozca más</p>
-    <h1 class="title">Acerca de mi</h1>
-    <div class="section-container">
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experiencia</h3>
-            <p>Sin experiencia Laboral <br />Backend Development</p>
-          </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Educacion</h3>
-            <p>Tecnico Superior en Desarrollo de Software</p>
-          </div>
-        </div>
-        <div class="text-container">
-          <div class="descripcion">
-            <p>
-              Como apasionado desarrollador backend, he cultivado y fortalecido mis habilidades en programación,
-              centrándome principalmente en lenguajes como JavaScript y la administración de bases de datos SQL Server.
-              Mi enfoque autodidacta me ha permitido construir una base sólida de conocimientos en estos campos, lo que
-              ha sido fundamental para abordar proyectos desafiantes y complejos.
-            </p>
-            <p>
-              Mi capacidad de adaptación es uno de mis activos más destacados. He enfrentado una variedad de situaciones
-              y desafíos en mi viaje como desarrollador. Desde la creación de proyectos como Aneyeon Pets (una
-              plataforma web para veterinarias) hasta la implementación de SGE (Sistema de Gestión Estudiantil), he
-              demostrado mi habilidad para adaptarme a diferentes contextos y necesidades técnicas.
-            </p>
-            <p>
-              Mi compromiso con la autoeducación no solo me ha ayudado a desarrollar habilidades técnicas sólidas, sino
-              también a fortalecer mi capacidad de resolución de problemas, pensamiento lógico y colaboración en equipo.
-              Como autodidacta, tengo una pasión innata por el aprendizaje continuo y siempre estoy buscando
-              oportunidades para mejorar mis habilidades y conocimientos.
-            </p>
-            <p>
-              Estoy emocionado por la oportunidad de aplicar mis habilidades y conocimientos en un entorno profesional,
-              contribuir al éxito de un equipo y seguir avanzando en mi desarrollo como desarrollador backend. Espero
-              poder formar parte de un equipo innovador y colaborativo donde mi experiencia y pasión por la tecnología
-              puedan marcar la diferencia. Mi mentalidad autodidacta y mi capacidad de adaptación me permiten enfrentar
-              nuevos desafíos con confianza y eficacia.
-            </p>
-          </div>
-            
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explora mi</p>
-    <h1 class="title">Experiencia</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>CSS</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>VB.NET</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Babel JS</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>SQL Server</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Node JS</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Express JS</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>MySQL</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>ASP.NET</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Explorar mis recientes</p>
-    <h1 class="title">Proyectos</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/Aneyeon Pets.jpg" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Aneyeon Pets (WEB Veterinarias)</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/SGE.png" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">SGE (Sistema de Gestion Estudiantil)</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
-  <section id="contact">
-    <p class="section__text__p1">Ponerse en contacto</p>
-    <h1 class="title">Contacteme</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:examplemail@gmail.com">bertinopaulo242@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">Acerca de</a></li>
-          <li><a href="#experience">Experiencia</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </div>
     </nav>
-    <p>Copyright &#169; 2023 Paulo Alejandro Bertino. Todos los Derechos Reservados.</p>
-  </footer>
-  <script src="script.js"></script>
+
+    <!-- vista principal (inicio) -->
+    <section id="inicio" class="section container-fluid bg-dark d-block">
+        <div class="section__flex d-flex flex-column justify-content-center align-items-center">
+            <span class="text-white d-block text-center fw-bold fs-5">Hola, <span
+                    class="text-warning fw-normal">Soy</span></span>
+            <span class="text-warning d-block text-center fw-bold fs-1">Paulo Bertino</span>
+            <span class="text-white d-block text-center fw-bold fs-5">Backend Developer</span>
+            <span class="text-white d-block text-center fw-bold fs-5">&lt;/&gt;</span>
+
+            <div class="section__links pt-4 w-100 d-flex justify-content-center">
+                <a class="me-3 text-decoration-none text-white fs-1" href="https://github.com/PauloBertino"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github icon_social"></i>
+                </a>
+                <a class="me-3 text-decoration-none text-white fs-1"
+                    href="https://www.linkedin.com/in/paulo-bertino-424818272/" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin icon_social"></i>
+                </a>
+                <a class="text-decoration-none text-white fs-1" href="./files/Curriculum_Paulo_Bertino.pdf"
+                    target="_blank">
+                    <i class="fa-solid fa-sheet-plastic icon_social"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- acerca de -->
+    <section class="acercade container-fluid" id="acercade">
+        <div class="contenedor__principal m-auto  text-white px-3">
+
+            <div class="row">
+                <div class="col-lg">
+                    <h2 class="text-center text-lg-start fw-bold my-5">Acerca de mi</h2>
+
+                    <p class="text-center text-lg-start">
+                        Hola, soy Paulo, un apasionado del desarrollo de software con una firme dedicación a la
+                        tecnología y la colaboración en equipo. Mi enfoque se centra en la búsqueda constante de
+                        desafíos y oportunidades para seguir creciendo profesionalmente. Estoy completamente
+                        comprometido a aprender y contribuir en proyectos innovadores que tengan un impacto positivo en
+                        la sociedad. Además, mi especialidad se encuentra en el desarrollo backend.
+                    </p>
+                    <a id="asd" class="contacto btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
+                        href="#contacto">Contactame</a>
+
+                </div>
+                <div class="col-lg">
+                    <img class="img__perfil me d-block w-75 m-auto rounded-circle py-5" src="./img/Perfil.png"
+                        alt="imagen de perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- educacion -->
+    <section id="educacion" class="habilidades container-fluid">
+        <div class="contenedor__principal m-auto text-white px-3">
+            <div class="row">
+                <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+                    <div class="col-lg">
+                        <h2 class="text-center text-lg-start fw-bold my-5">Educación</h2>
+
+                        <p class="text-center text-lg-start">
+                            Técnico Superior en Desarrollo de Software (2021-2023)
+                        </p>
+
+                        <h2 class="text-center text-lg-start fw-bold my-5">Cursos:</h2>
+                        <ul class="text-center text-lg-start">
+                            <li>JavaScript Moderno - Udemy (2023-2024)</li>
+                            <li>Protege tu Negocio: Ciberseguridad en el Teletrabajo - Google Actívate 2023</li>
+                        </ul>
+
+                        <a class="proyectos btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
+                            href="#habilidades">Habilidades</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- habilidades -->
+    <section id="habilidades" class="habilidades container-fluid">
+        <div class="contenedor__principal m-auto text-white px-3">
+            <div class="row">
+                <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+                    <div class="col-lg">
+                        <h2 class="text-center text-lg-start fw-bold my-5">Habilidades</h2>
+
+                        <p class="text-center text-lg-start">
+                            Mis habilidades se basan en el aprendizaje continuo y la actualización constante. Siempre
+                            estoy buscando nuevas
+                            oportunidades de crecimiento y mejora en áreas como la tecnología.
+                        </p>
+
+                        <a class="proyectos btn btn-warning d-block m-auto my-lg-5 mx-lg-0"
+                            href="#experiencia">Proyectos</a>
+                    </div>
+                    <div class="col-lg my-5">
+                        <div class="d-flex justify-content-center px-4">
+                            <ul class="me-5">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>VB.NET</li>
+                                <li>Babel JS</li>
+                            </ul>
+
+                            <ul>
+                                <li>SQL Server</li>
+                                <li>Node JS</li>
+                                <li>Express JS</li>
+                                <li>MySQL</li>
+                                <li>Git</li>
+                                <li>ASP.NET</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- experiencia -->
+    <section id="experiencia" class="experiencia container-fluid mb-5">
+        <div class="contenedor__principal m-auto text-white px-3">
+
+            <div class="row">
+                <div class="col">
+                    <h2 class=" text-center fw-bold my-5">Experiencia</h2>
+                </div>
+            </div>
+
+            <div class="row row-cols-md-2 row-cols-xl-3">
+                <div class="col-md p-2">
+                    <article class="article__experiencia">
+                        <div class="imagen_referencia">
+                            <img class="w-100 rounded-2" src="img/SGE.png" alt="experiencia ITQuentame & sge">
+                        </div>
+
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <span class="m-0 fw-bold">SGE (Sistema de Gestion Estudiantil)</span>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#sge" class="btn btn-warning">Ver
+                            más</button>
+                    </article>
+                </div>
+
+                <div class="col-md p-2">
+                    <article class="article__experiencia">
+                        <div class="imagen_referencia">
+                            <img class="w-100 rounded-2" src="img/Aneyeon Pets.jpg" alt="experiencia auto renting hca">
+                        </div>
+
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+
+                        <span class="m-0 fw-bold">Aneyeon Pets (WEB Veterinarias)</span>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#AneyeonPets"
+                            class="btn btn-warning">Ver más</button>
+                    </article>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- svg waves -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1f1f1f" fill-opacity="1"
+            d="M0,96L120,122.7C240,149,480,203,720,218.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+        </path>
+    </svg>
+
+
+    <!-- footer -->
+    <footer class="text-white footer container-fluid" id="contacto">
+        <div class="contenedor__principal m-auto px-3">
+            <div class="row">
+                <div class="d-flex flex-column flex-md-row justify-content-sm-between align-items-sm-center">
+                    <div class="footer__name pb-5">
+                        <span class="d-block fs-4 fw-bold text-center text-md-start">Paulo <span
+                                class="text-warning">Bertino</span></span>
+                        <span class="text-white d-block text-center text-md-start fs-6">Backend Developer</span>
+                    </div>
+
+                    <div class="pb-5">
+                        <span class="d-block text-center text-md-start">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            bertinopaulo242@gmail.com</span>
+                    </div>
+
+                    <div class="text-center pb-5">
+                        <a class="me-3 text-decoration-none text-white" href="https://github.com/PauloBertino"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github fs-3"></i>
+                        </a>
+                        <a class="me-3 text-decoration-none text-white"
+                            href="https://www.linkedin.com/in/paulo-bertino-424818272/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin fs-3"></i>
+                        </a>
+
+                        <a class="text-decoration-none text-white fs-1" href="./files/Curriculum_Paulo_Bertino.pdf"
+                            target="_blank">
+                            <i class="fa-solid fa-sheet-plastic fs-3"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+    </footer>
+
+
+    <!-- Ventanas modal -->
+    <!-- SGE modal-->
+    <div class="modal fade" id="sge" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">SGE (Sistema de Gestion Estudiantil)</h1>
+                </div>
+                <div class="modal-body modal__body--bg">
+                    <h3>ISVDR - Fullstack Developer 2021 -2022</h3>
+                    <p>FULL STACK DEVELOPER - CO-FOUNDER & LEAD DEVELOPER (SGE) 2021 - 2022<br /></p>
+
+                    <br>
+
+                    <p>
+                        Durante mi segundo año de práctica, tuve el rol de co-líder en el desarrollo de una aplicación
+                        dedicada a la gestión estudiantil. Esta aplicación permitió la administración de información de
+                        alumnos en entornos escolares, abarcando aspectos como su ficha médica, los datos de sus
+                        responsables legales y los docentes a cargo.</p>
+
+                    <p>Además de estas funcionalidades esenciales, llevamos a cabo la implementación de una
+                        característica adicional de integración. Esta característica tenía como objetivo simplificar y
+                        mejorar la comunicación entre profesores y padres, facilitando así la interacción necesaria para
+                        el progreso y bienestar de los estudiantes.</p>
+
+
+                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+                        <div class="w-100">
+                            <a class="btn btn-warning mt-3" href="#" target="_blank" rel='noopener noreferrer'>
+                                Visitar Repositorio
+                            </a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
+                    <ul>
+                        <li>VB.NET </li>
+                        <li>ASP.NET </li>
+                        <li>SQL SERVER </li>
+                        <li>HTML & CSS</li>
+                        <li>VISUAL STUDIO </li>
+                        <li>GIT</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer modal__footer--bg">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Aneyeon Pets modal-->
+    <div class="modal fade" id="AneyeonPets" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content modal__content--border">
+                <div class="modal-header modal__header--bg text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Aneyeon Pets (WEB Veterinarias)</h1>
+                </div>
+                <div class="modal-body modal__body--bg">
+                    <h3>ISVDR - Backend Developer 2023 - Actual</h3>
+                    <p>BACKEND DEVELOPER - CO-FOUNDER & LEAD DEVELOPER (ANEYEON PETS) 2022 - 2023 <br /></p>
+
+                    <br>
+
+                    <p>Para mi proyecto final de la carrera, me encuentro desempeñando un rol de co-líder en el
+                        desarrollo de una Aplicación Web destinada a clínicas veterinarias, utilizando Node.js como
+                        tecnología central. En este proyecto, mi principal responsabilidad radica en la creación y
+                        gestión de una API esencial para el manejo de datos críticos.</p>
+
+                    <p>Además de la creación de esta API, hemos enfocado nuestros esfuerzos en fortalecer la seguridad
+                        de la aplicación mediante la implementación de cookies y JSON Web Tokens. Esto garantiza la
+                        protección adecuada de la información sensible.</p>
+
+                    <p>Una parte destacada de nuestro proyecto es la exitosa integración con servicios de terceros,
+                        como Mercado Pago, AFIP y Google. Esta colaboración con estos proveedores externos ha
+                        enriquecido significativamente la funcionalidad y el alcance de nuestra aplicación.</p>
+
+                    <p>Asimismo, he contribuido activamente a la implementación de la API en el FrontEnd, haciendo uso
+                        de JavaScript para garantizar una experiencia de usuario fluida y coherente. En conjunto, estos
+                        esfuerzos han permitido avanzar de manera significativa en el desarrollo de la aplicación web
+                        para veterinarias.</p>
+                    <br>
+
+                    <a class="btn btn-warning my-3" href="#" target="_blank" rel='noopener noreferrer'>
+                        Visitar repositorio
+                    </a>
+
+                    <br>
+                    <span class="d-block fw-bold">Tecnologías utilizadas:</span>
+                    <ul>
+                        <li>VS CODE</li>
+                        <li>NODE.JS</li>
+                        <li>EXPRESS.JS</li>
+                        <li>BABEL.JS</li>
+                        <li>SQL SERVER</li>
+                        <li>JAVASCRIPT</li>
+                        <li>JSON WEB TOKENS</li>
+                        <li>API AFIP</li>
+                        <li>API MERCADO PAGO</li>
+                        <li>API GOOGLE MAPS</li>
+                        <li>LOCALSTORAGE</li>
+                        <li>COOKIES</li>
+                        <li>GIT</li>
+                    </ul>
+                </div>
+                <div class="modal-footer modal__footer--bg">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- mis scripts -->
+    <script defer src="js/index.js"></script>
 </body>
 
 </html>
