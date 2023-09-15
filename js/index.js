@@ -78,22 +78,3 @@ function hiddenShowSpinner() {
 function spinnerStyle(element, styleCustom, valueCustom) {
     element.forEach((e) => (e.style[styleCustom] = `${valueCustom}`));
 }
-
-function showDownloadConfirmation() {
-    Swal.fire({
-        title: '¿Desea descargar el CV?',
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonText: 'Sí, descargar',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // El usuario ha confirmado la descarga, el navegador manejará la descarga del currículum
-            // debido al atributo "download" en el enlace.
-        }
-    });
-}
-
-function confirmarDescarga() {
-    return confirm('¿Desea descargar el CV?');
-}
